@@ -34,13 +34,38 @@ exports.create = (req, res) => {
 
 exports.findAll = (req, res) => {
 
-    Web_api_backend.find();
+    const type = req.body.type;
+    let condition = type ? { title: { $regex: new RegExp(type), $options: "i" } } : {};
 
+    Web_api_backend.find(condition)
+        .then(data => {
+            res.send(data);
+        })
+        .catch(err => {
+            res.status(500).send({
+                message:
+                    err.message || "Algún error ocurrió mientras se devolvían los modelos."
+            });
+        });
 };
 
 exports.findOne = (req, res) => {
 
-    Web_api_backend.findOne();
+    const id = req.params.id;
+
+    Web_api_backend.findById(id)
+        .then(data => {
+            if (!data) 
+                res.status(404).send({
+                    message: "Modelo con id no encontrado " + id
+                });
+            else res.send(data);
+        })
+        .catch(err => {
+            res.status(500).send({
+                message: "Error al devolver un modelo con id = " + id
+            });
+        });
     
 };
 
