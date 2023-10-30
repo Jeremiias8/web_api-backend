@@ -30,6 +30,9 @@ app.get('/user', (req, res) => {
     });
 });
 
+// importando archivo rutas
+const routes = require('./routes/web_api-routes')(app);
+
 // seteando puerto de escucha para peticiones
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {

@@ -5,7 +5,6 @@ module.exports = mongoose => {
         mongoose.Schema(
             {
                 type: String,
-                date: Date.now,
                 description: String,
                 published: Boolean
             },
