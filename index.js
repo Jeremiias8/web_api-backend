@@ -22,12 +22,20 @@ app.get('/', (req, res) => {
     res.json({ message: "what's up m'boy!" });
 });
 
+// JSON que se devuelve en esa ruta de la API
 app.get('/user', (req, res) => {
-    res.json({ 
-        id: 1,
-        usuario: "Jere",
-        username: "jeremiasweb"
-    });
+    res.json(
+        { 
+            id: 1,
+            usuario: "Jeremías",
+            web: "www.jeremiasweb.com"
+        },
+        {
+            id: 2,
+            usuario: "Jeremy", 
+            web: "jeritto8web.com"
+        }
+    );
 });
 
 // importando archivo rutas
