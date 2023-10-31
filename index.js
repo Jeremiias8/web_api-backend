@@ -19,7 +19,7 @@ app.use(express.urlencoded({extended: true}));
 
 // ruta base
 app.get('/', (req, res) => {
-    res.json({ message: "what's up m'boy!" });
+    res.json({ message: "ruta base desde la api del backend" });
 });
 
 // JSON que se devuelve en esa ruta de la API
