@@ -1,5 +1,6 @@
 
 module.exports = app => {
+
     const modelos = require('../controllers/web_api-controller');
 
     let router = require('express').Router();
@@ -26,4 +27,5 @@ module.exports = app => {
     router.delete('/', modelos.deleteAll);
 
     app.use('/api/modelos', router);
+    
 }
