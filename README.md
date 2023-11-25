@@ -1,4 +1,4 @@
 # web_api-backend
-API REST con el famoso stack. NodeJS, ExpressJS, MongoDB.
+API REST con el famoso Stack: NodeJS, ExpressJS, MongoDB.
 
-Pequeña API usada por defecto con todo lo necesario para integrar en cualquier proyecto con backend.
+Pequeña API con todo lo necesario para integrar en cualquier proyecto que necesite de backend.
