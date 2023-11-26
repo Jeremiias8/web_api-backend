@@ -89,7 +89,7 @@ exports.update = (req, res) => {
         })
         .catch(err => {
             res.status(500).send({
-                message: "Error al actualizar el Modelo con id = " + id
+                message: "Error al actualizar el modelo con id = " + id
             });
         });
     
@@ -103,7 +103,7 @@ exports.delete = (req, res) => {
         .then(data => {
             if (!data) {
                 res.status(404).send({
-                    message: `No se ha podido eliminar el Modelo con id = ${id}. Quizás el modelo no fue encontrado`
+                    message: `No se ha podido eliminar el model con id = ${id}. Quizás el modelo no fue encontrado`
                 });
             } else {
                 res.send({
@@ -113,10 +113,9 @@ exports.delete = (req, res) => {
         })
         .catch(err => {
             res.status(500).send({
-                message: "Puede que no se haya eliminado el Modelo con id = " + id
+                message: "Puede que no se haya eliminado el model con id = " + id
             });
         });
-
 };
 
 exports.deleteAll = (req, res) => {
