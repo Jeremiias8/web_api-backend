@@ -7,7 +7,7 @@ exports.create = (req, res) => {
     // validando petición
     if (!req.body.title) {
         res.status(400).send({
-            message: "Content can not be empty!"
+            message: "Content can't' be empty!"
         });
     }
 
@@ -27,7 +27,7 @@ exports.create = (req, res) => {
         .catch(err => {
             res.status(500).send({
                 message:
-                    err.message || "Algún error ocurrió mientras se creaba el modelo."
+                    err.message || "Ocurrió un error mientras se creaba el modelo."
             });
         });
 };
