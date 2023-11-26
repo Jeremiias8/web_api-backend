@@ -44,7 +44,7 @@ exports.findAll = (req, res) => {
         .catch(err => {
             res.status(500).send({
                 message:
-                    err.message || "Algún error ocurrió mientras se devolvían los modelos."
+                    err.message || "Ocurrió un error mientras se devolvian los modelos."
             });
         });
 };
@@ -63,7 +63,7 @@ exports.findOne = (req, res) => {
         })
         .catch(err => {
             res.status(500).send({
-                message: "Error al devolver un Modelo con id = " + id
+                message: "Error al devolver un modelo con id = " + id
             });
         });
     
@@ -73,7 +73,7 @@ exports.update = (req, res) => {
 
     if (!req.body) {
         return res.status(400).send({
-            message: "Datos para actualizar no fueron encontrados..."
+            message: "Los datos requeridos para actualizar no fueron encontrados..."
         });
     }
 
