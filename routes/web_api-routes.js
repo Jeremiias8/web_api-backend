@@ -27,5 +27,4 @@ module.exports = app => {
     router.delete('/', modelos.deleteAll);
 
     app.use('/api/modelos', router);
-    
 }

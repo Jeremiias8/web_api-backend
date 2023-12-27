@@ -58,6 +58,6 @@ db.mongoose
         console.log("Conectado a la BBDD exitosamente !");
     })
     .catch((error) => {
-        console.log("No se pudo conectar a la BBDD...", error);
+        console.log("No fue posible conectar a la BBDD...", error);
         process.exit();
     });
